@@ -1,5 +1,4 @@
-# leetcode
-leetcode oj
+
 leetcode
 ========
 
@@ -11,5 +10,6 @@ My Leetcode OnlineJudge codes
 
 8/4/2014
 
-8/6/2014 two_sum, Reverse_String
+8/6/2014 两道题，在C200完成，two_sum, Reverse_String
+
 
