@@ -1,0 +1,111 @@
+Given an array of integers, find two numbers such that they add up to a specific target number.
+
+The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.
+
+You may assume that each input would have exactly one solution.
+
+Input: numbers={2, 7, 11, 15}, target=9
+Output: index1=1, index2=2
+
+想法一：
+
+一看题目想到n^2的方法 直接暴力搜吧， 注意到给的好像没有排序
+
+public class Solution {
+    public int[] twoSum(int[] numbers, int target) {
+    int[] a = {0,0};
+    outer:for (int i = 0;i <= numbers.length - 2;i++) {
+        for (int j = i + 1;j <= numbers.length - 1;j++) {
+            if (numbers[i] + numbers[j] == target) {
+                a[0] = i + 1;
+                a[1] = j + 1;
+                break outer;    //break只会跳出一层循环，必须标记flag
+            }
+        }
+    }
+    return a;  //为啥不能在里面声明？搞不懂
+    }
+}
+
+结果华丽丽超时了，想必不是跳出的问题。
+
+想法二：
+
+遍历第一个数，第二个数用 target- i 来查找在数组中哪里？ 本方法是快排+二分查找。
+
+想法三：
+
+既然用java 我们搞个 HashMap 或者 Hashtable玩玩。二者区别如下：
+
+1 HashMap不是线程安全的
+
+hastmap是一个接口 是map接口的子接口，是将键映射到值的对象，其中键和值都是对象，并且不能包含重复键，但可以包含重复值。HashMap允许null key和null value，而hashtable不允许。
+
+2   HashTable是线程安全的一个Collection。
+
+HashMap是Hashtable的轻量级实现（非线程安全的实现），他们都完成了Map接口，主要区别在于HashMap允许空（null）键值（key）,由于非线程安全，效率上可能高于Hashtable。
+HashMap允许将null作为一个entry的key或者value，而Hashtable不允许。
+HashMap把Hashtable的contains方法去掉了，改成containsvalue和containsKey。因为contains方法容易让人引起误解。 
+Hashtable继承自Dictionary类，而HashMap是Java1.2引进的Map interface的一个实现。
+最大的不同是，Hashtable的方法是Synchronize的，而HashMap不是，在多个线程访问Hashtable时，不需要自己为它的方法实现同步，而HashMap 就必须为之提供外同步。 
+
+http://www.cnblogs.com/taotaoblog/archive/2009/09/19/1569958.html
+
+        P.S. LinkedHashMap是有序的HashMap
+
+这次是搜索value，所以需要重新建一个Hashtable，
+
+干脆直接把hash做好，挨个查，2n的时间应该可以通过哇，程序如下：
+
+他   
+
+想法四：
+
+    1、每次遍历看num[i]组在不在hash里，不在就加。
+
+    2、看target-num[i]在不在，不在就算下一个，在就是你了。
+
+这里1,2换过来逻辑更通一些，先看我的目标在不在，如果不在的话，说明还没加进来，那就我也加进来为后人来铺路了。或者得到如下程序：
+
+import java.util.*;
+public class Solution {
+public int[] twoSum(int[] numbers, int target) {
+    int[] a = {0,0};
+    Hashtable<Integer, Integer> hash = new Hashtable<Integer, Integer>();
+    for (int i = 0; i <= numbers.length-1; i++) {
+        hash.put(numbers[i], i);
+    }
+    for (int i = 0; i <= numbers.length-1; i++) {
+        Integer n = hash.get(target - numbers[i]);
+        if (n != null && n!= i) {   // 这里由于之前都在了，如果遇到自己正好是target的一半的话就不能等于了
+             if (n<i) {
+                a[0] = n + 1;
+                a[1] = i + 1;
+                return a;
+              } else {
+                a[0] = i + 1;
+                a[1] = n + 1;
+                return a;              
+
+// 这里麻烦的判断的方法 ，找到了大小一比输出。但是如果判断直接换成n < i ，忽略了n比i大却不行，[0,4,3,0], 0 输入 hash因为是预先建立的（这就是坏处）从头开始建立0的value的是3不是0, 这时只存在一个解而不是成双的！！n必然大于i 从而输出错误！ 
+
+              }
+         }
+    }
+    return a;
+    }
+}
+
+你会发现情况总是n 大于 i 所以 判断设成 n>i 即可行！！
+
+if (n != null && n > i) {
+    a[0] = i + 1;
+    a[1] = n + 1;
+    return a;
+}
+
+想法五：
+
+这就是看别人的思路了，在我的基础上考虑，既然target总有一对相加得到，找不到必然是另一个不在hash里，那我就自己加进去，边遍历边加hash。O(n)的时间就搞定了。即使再来和我一样的，也保证了不会覆盖掉hash的情况！！
+
+
