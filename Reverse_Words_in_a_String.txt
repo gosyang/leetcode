@@ -1,0 +1,33 @@
+Given an input string, reverse the string word by word.
+
+For example,
+Given s = "the sky is blue",
+return "blue is sky the".
+
+click to show clarification.
+
+Clarification:
+
+
+What constitutes a word?
+A sequence of non-space characters constitutes a word.
+Could the input string contain leading or trailing spaces?
+Yes. However, your reversed string should not contain leading or trailing spaces.
+How about multiple spaces between two words?
+Reduce them to a single space in the reversed string.
+事实证明这三个clarification非常重要：首先空格之间的词都算单词，所以想到用split来分割; 第二个说你的结果前后不能有空格;第三个说结果中间一个空格就行了。审题太重要。
+public class Solution {
+    public String reverseWords(String s) {
+    String[] ss = s.split(" ");
+    String ans = "";
+    for (String t : ss) {
+        if (!t.equals("")) {
+        ans = t + " " + ans;
+        }
+    }
+        return ans.length()==0?"":ans.substring(0,ans.length()-1);  //substring方法传进去end他会自动减1.
+    }
+}
+我想多了，如果输入一个空格那按照要求必然是 "", 无论几个" " 结果应该都是""。最后一句来判断即可。
+所以不能光判断是否等于""或" " 应该按照split后的结果判断有几个单词
+可能出现" 1"这种前后空格的情况，即有分割结果是"" 因此必须在组成ans的时候判断是否等于""
