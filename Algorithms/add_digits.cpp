@@ -22,7 +22,6 @@ int addDigits(int num) {
     } else {
         return num % 9;
     }
-
 }
 
 int main() {

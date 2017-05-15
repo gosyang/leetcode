@@ -8,7 +8,7 @@ public class Reverse_String {
         	if (!t.equals("")) {
             	ans = t + " " + ans;
         	}
-        	}
+        }
         return ans.length()==0?"":ans.substring(0,ans.length()-1);
     }
 }
