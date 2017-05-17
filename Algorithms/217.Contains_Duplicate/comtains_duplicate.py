@@ -14,7 +14,8 @@ Date: 2017/05/16 16:56:26
 class Solution(object):
     def containsDuplicate(self, nums):
         """
-        用时54ms, 基本思路是 变成set 再比较len
+        用时54ms; python简单基本思路是 变成set 再比较len
+        TODO: set()时间复杂度多少？如何实现的？
         :type nums: List[int]
         :rtype: bool
         """
