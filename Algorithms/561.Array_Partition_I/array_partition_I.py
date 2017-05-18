@@ -26,3 +26,4 @@ class Solution(object):
         return sum
 
     # sum(sorted(nums)[::2]) 利用切片来实现的!
+
