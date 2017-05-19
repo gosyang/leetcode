@@ -36,7 +36,3 @@ class Solution(object):
             pre_head = tmp_node
         reverse_head.next = pre_head
         return reverse_head
-            
-            
-            
-
