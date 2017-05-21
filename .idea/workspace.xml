@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="13a8d94e-754f-485a-8e82-e10d9065ce8c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Algorithms/206.Reverse_Linked_List/reverse_linked_list.py" afterPath="$PROJECT_DIR$/Algorithms/206.Reverse_Linked_List/reverse_linked_list.py" />
-    </list>
+    <list default="true" id="13a8d94e-754f-485a-8e82-e10d9065ce8c" name="Default" comment="" />
     <ignored path="leetcode.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -14,6 +11,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/leetcode$intersection_of_two_arrays_II.coverage" NAME="intersection_of_two_arrays_II Coverage Results" MODIFIED="1495295214751" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Algorithms/350.Intersection_of_Two_Arrays_II" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -36,21 +36,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="reverse_linked_list.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/Algorithms/206.Reverse_Linked_List/reverse_linked_list.py">
+          <file leaf-file-name="intersection_of_two_arrays_II.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Algorithms/350.Intersection_of_Two_Arrays_II/intersection_of_two_arrays_II.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="576">
-                  <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="binary_watch.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Algorithms/401.Binary_Watch/binary_watch.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="583">
-                  <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+                  <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
                   <folding />
                 </state>
               </provider>
@@ -60,14 +50,12 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="binary_watch_test.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/Algorithms/401.Binary_Watch/binary_watch_test.py">
+          <file leaf-file-name="intersection_of_two_arrays_II_test.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Algorithms/350.Intersection_of_Two_Arrays_II/intersection_of_two_arrays_II_test.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="336">
-                  <caret line="37" column="64" selection-start-line="37" selection-start-column="64" selection-end-line="37" selection-end-column="64" />
-                  <folding>
-                    <element signature="e#334#349#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="511">
+                  <caret line="32" column="75" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -101,6 +89,8 @@
         <option value="$PROJECT_DIR$/Algorithms/206.Reverse_Linked_List/reverse_linked_list.py" />
         <option value="$PROJECT_DIR$/Algorithms/401.Binary_Watch/binary_watch_test.py" />
         <option value="$PROJECT_DIR$/Algorithms/401.Binary_Watch/binary_watch.py" />
+        <option value="$PROJECT_DIR$/Algorithms/350.Intersection_of_Two_Arrays_II/intersection_of_two_arrays_II_test.py" />
+        <option value="$PROJECT_DIR$/Algorithms/350.Intersection_of_Two_Arrays_II/intersection_of_two_arrays_II.py" />
       </list>
     </option>
   </component>
@@ -157,7 +147,25 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.intersection_of_two_arrays_II">
+    <configuration default="false" name="intersection_of_two_arrays_II" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Algorithms/350.Intersection_of_Two_Arrays_II" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="leetcode" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Algorithms/350.Intersection_of_Two_Arrays_II/intersection_of_two_arrays_II.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -366,6 +374,14 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.intersection_of_two_arrays_II" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.intersection_of_two_arrays_II" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -400,9 +416,11 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290859" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39886847" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -411,12 +429,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -498,18 +514,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Algorithms/401.Binary_Watch/binary_watch_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="151">
           <caret line="37" column="64" selection-start-line="37" selection-start-column="64" selection-end-line="37" selection-end-column="64" />
           <folding>
-            <element signature="e#334#349#0" expanded="true" />
+            <element signature="e#334#349#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Algorithms/401.Binary_Watch/binary_watch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
+        <state relative-caret-position="888">
           <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/350.Intersection_of_Two_Arrays_II/intersection_of_two_arrays_II_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="32" column="75" selection-start-line="32" selection-start-column="75" selection-end-line="32" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/collections.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2558">
+          <caret line="394" column="6" selection-start-line="394" selection-start-column="6" selection-end-line="394" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Algorithms/350.Intersection_of_Two_Arrays_II/intersection_of_two_arrays_II.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
           <folding />
         </state>
       </provider>
