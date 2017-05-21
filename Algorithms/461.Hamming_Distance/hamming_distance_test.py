@@ -8,7 +8,7 @@
  
 """
 File: hamming_distance_test.py
-Author: baidu(baidu@baidu.com)
+Author: gosyang
 Date: 2017/05/15 16:10:09
 """
 import unittest
