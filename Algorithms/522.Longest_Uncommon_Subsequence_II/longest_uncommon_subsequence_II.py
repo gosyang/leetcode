@@ -25,6 +25,7 @@ class Solution(object):
             
     def findLUSlength(self, strs):
         """
+        思路就是 先按找长度倒序排序, 从长到短扫, 判断重复的长度, 并考虑是否是之前出现的子串
         :type strs: List[str]
         :rtype: int
         """
