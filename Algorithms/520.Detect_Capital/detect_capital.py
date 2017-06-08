@@ -28,3 +28,6 @@ class Solution(object):
         return first_capital and others_all_lower or \
                first_capital and others_all_capital or \
                not first_capital and others_all_lower
+
+        # Python istitle() 方法检测字符串中所有的单词拼写首字母是否为大写，且其他字母为小写。
+        # return  word.isupper() or word.istitle() or word.islower()
