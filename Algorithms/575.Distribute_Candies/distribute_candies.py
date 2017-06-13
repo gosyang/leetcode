@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 ########################################################################
 # 
-# Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
+# Copyright (c) 2017 gosyang. All Rights Reserved
 # 
 ########################################################################
  
@@ -11,7 +11,7 @@ File: distribute_candies.py
 Author: gosyang
 Date: 2017/05/31 09:47:13
 """
-import  collections
+import collections
 
 
 class Solution(object):
