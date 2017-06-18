@@ -28,6 +28,7 @@ class Solution(object):
             sum += diff_sum
         return sum
         
-        # ?
+        # 数学问题, sum + m * (n - 1) = x * n, sum是当前的总和, 移动m后最后都变成x,
+        # 由于 $最小的肯定每次都加$关键$,  x = minNum + m, 所以得到以下答案,
         # return sum(nums) - min(nums) * len(nums)
 
