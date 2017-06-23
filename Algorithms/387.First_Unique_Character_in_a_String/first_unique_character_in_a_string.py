@@ -26,3 +26,9 @@ class Solution(object):
             if map[v] == 1:
                 return i
         return -1
+
+        # best:
+	# >>> import string
+        # >>> string.ascii_lowercase
+        # 'abcdefghijklmnopqrstuvwxyz'
+        # return min([s.find(c) for c in string.ascii_lowercase if s.count(c) == 1] or [-1])
