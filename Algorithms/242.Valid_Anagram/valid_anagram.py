@@ -22,5 +22,6 @@ class Solution(object):
         :type t: str
         :rtype: bool
         """
+        # 提升速度的话就是先判断长度，再累计，在过程中发现不一样的字母就return
         return collections.Counter(s) == collections.Counter(t)
         
