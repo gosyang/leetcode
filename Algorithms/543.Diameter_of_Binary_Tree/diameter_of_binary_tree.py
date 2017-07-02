@@ -28,8 +28,7 @@ class Solution(object):
             return 0, 0
         left_diameter, left_longest = self.diameterOfBinaryTreeAndLongestPath(root.left)
         right_diameter, right_longest = self.diameterOfBinaryTreeAndLongestPath(root.right)
-        return max(left_diameter, right_diameter, left_longest + right_longest + 1), 
-               max(left_longest + 1, right_longest + 1)
+        return max(left_diameter, right_diameter, left_longest + right_longest + 1), max(left_longest + 1, right_longest + 1)
         
     def diameterOfBinaryTree(self, root):
         """
