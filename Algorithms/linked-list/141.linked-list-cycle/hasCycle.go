@@ -39,3 +39,17 @@ func hasCycle(head *ListNode) bool {
 // 使用哈希表记录地址是个办法，判断是否访问过
 // 如果要O(1)的空间复杂，使用一个每次走两次的fast，一个走1次的slow，追逐;
 // 判断的时候fast快所以判断fast的边界nil问题
+
+// 第二次做，精简不少
+func hasCycle2(head *ListNode) bool {
+	fast := head
+	slow := head
+	for slow != nil && fast != nil && fast.Next != nil {
+		fast = fast.Next.Next
+		slow = slow.Next
+		if fast == slow {
+			return true
+		}
+	}
+	return false
+}

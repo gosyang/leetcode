@@ -20,7 +20,7 @@ type ListNode struct {
     Next *ListNode
 }
 func reverseList(head *ListNode) *ListNode {
-	if head == nil || head.Next == nil{
+	if head == nil || head.Next == nil {
 		return head
 	}
 	rHead := &ListNode{
@@ -38,3 +38,15 @@ func reverseList(head *ListNode) *ListNode {
 }
 // 翻转链表，考虑nil，单个的情况，之后就是从第二个开始
 // 完全可以用 var 生命一个空指针啊！！
+
+func reverseList2(head *ListNode) *ListNode {
+	cur := head
+	var pre *ListNode
+	for cur != nil {
+		tmp := cur.Next
+		cur.Next = pre
+		pre = cur
+		cur = tmp
+	}
+	return pre
+}
