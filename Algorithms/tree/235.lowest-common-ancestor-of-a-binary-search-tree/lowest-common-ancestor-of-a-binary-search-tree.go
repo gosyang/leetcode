@@ -33,3 +33,18 @@ func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 
 // root判断不能少，养成习惯，有指针有成员变量，先判断指针nil
 // 如果是q，p的大小不知道p一定比q小，那就放在最后了
+
+func lowestCommonAncestor2(root, p, q *TreeNode) *TreeNode {
+	for root != nil {
+		if p.Val < root.Val && q.Val < root.Val {
+			root = root.Left
+		} else if p.Val > root.Val && q.Val > root.Val {
+			root = root.Right
+		} else {
+			return root
+		}
+	}
+	return nil
+}
+
+// 非递归更快, 总结tree的递归非递归的关系，非递归就是root的更新！
