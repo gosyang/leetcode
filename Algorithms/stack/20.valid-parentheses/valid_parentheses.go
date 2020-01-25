@@ -40,4 +40,6 @@ func isValid(s string) bool {
 	return len(stack) == 0
 }
 
-// 这个题使用rune做单字符是go的收获！使用golang的字符串遍历
+// 这个题使用rune做单字符是go的收获！使用golang的字符串遍历,
+// rune int32, byte int8
+// 另外就是单引号和双引号不能混用
