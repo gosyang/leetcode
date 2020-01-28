@@ -20,7 +20,7 @@ package _0_valid_parentheses
 
 func isValid(s string) bool {
 	stack := make([]rune, 0)
-	parentMap := map[rune]rune{'(':')', '[':']', '{':'}'}
+	parentMap := map[rune]rune{'(': ')', '[': ']', '{': '}'}
 
 	for _, v := range s {
 		if _, ok := parentMap[v]; ok {

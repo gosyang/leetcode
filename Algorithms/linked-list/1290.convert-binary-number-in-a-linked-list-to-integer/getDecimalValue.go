@@ -16,17 +16,17 @@ package main
 
 //* Definition for singly-linked list.
 type ListNode struct {
-    Val int
-    Next *ListNode
+	Val  int
+	Next *ListNode
 }
 
 func getDecimalValue(head *ListNode) int {
 	ans := head.Val
-    for head.Next != nil {
+	for head.Next != nil {
 		ans <<= 1
 		head = head.Next
 		ans += head.Val
-    }
+	}
 	return ans
 }
 

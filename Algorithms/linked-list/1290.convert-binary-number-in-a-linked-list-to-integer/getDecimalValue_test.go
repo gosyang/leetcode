@@ -16,8 +16,8 @@ import "testing"
 
 func TestGetDecimalValue(t *testing.T) {
 	tests := []struct {
-		name string
-		input *ListNode
+		name   string
+		input  *ListNode
 		expect int
 	}{
 		{

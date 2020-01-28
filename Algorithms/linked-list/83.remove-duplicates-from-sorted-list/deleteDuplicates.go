@@ -16,12 +16,13 @@ package main
  * Definition for singly-linked list.
  */
 type ListNode struct {
-    Val int
-    Next *ListNode
+	Val  int
+	Next *ListNode
 }
+
 func deleteDuplicates(head *ListNode) *ListNode {
 	h := head
-	for h!= nil && h.Next != nil {
+	for h != nil && h.Next != nil {
 		// 如果重复
 		if h.Val == h.Next.Val {
 			h.Next = h.Next.Next

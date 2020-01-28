@@ -18,9 +18,10 @@ package _76_middle_of_the_linked_list
  * Definition for singly-linked list.
  */
 type ListNode struct {
-    Val int
-    Next *ListNode
+	Val  int
+	Next *ListNode
 }
+
 func middleNode(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return head
@@ -36,4 +37,5 @@ func middleNode(head *ListNode) *ListNode {
 	}
 	return slow
 }
+
 // 一般这种中点问题就是快慢指针，从头开始

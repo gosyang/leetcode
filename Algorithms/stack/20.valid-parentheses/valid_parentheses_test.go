@@ -16,23 +16,23 @@ import "testing"
 
 func TestIsValid(t *testing.T) {
 	tests := []struct {
-		name string
-		input string
+		name   string
+		input  string
 		expect bool
 	}{
 		{
-			name: "()",
-			input: "()",
+			name:   "()",
+			input:  "()",
 			expect: true,
 		},
 		{
-			name: "()[]",
-			input: "()[]",
+			name:   "()[]",
+			input:  "()[]",
 			expect: true,
 		},
 		{
-			name: "(]",
-			input: "(]",
+			name:   "(]",
+			input:  "(]",
 			expect: false,
 		},
 	}

@@ -18,8 +18,8 @@ package _2_remove_duplicates_from_sorted_list_ii
  * Definition for singly-linked list.
  */
 type ListNode struct {
-    Val int
-    Next *ListNode
+	Val  int
+	Next *ListNode
 }
 
 func deleteDuplicates(head *ListNode) *ListNode {

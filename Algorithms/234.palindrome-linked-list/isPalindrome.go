@@ -18,9 +18,10 @@ package _34_palindrome_linked_list
  * Definition for singly-linked list.
  */
 type ListNode struct {
-    Val int
-    Next *ListNode
+	Val  int
+	Next *ListNode
 }
+
 func isPalindrome(head *ListNode) bool {
 	if head == nil || head.Next == nil {
 		return true

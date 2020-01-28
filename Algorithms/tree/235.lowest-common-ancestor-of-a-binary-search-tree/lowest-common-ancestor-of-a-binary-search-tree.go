@@ -13,8 +13,8 @@ DESCRIPTION
 package _35_lowest_common_ancestor_of_a_binary_search_tree
 
 type TreeNode struct {
-	Val int
-	Left *TreeNode
+	Val   int
+	Left  *TreeNode
 	Right *TreeNode
 }
 

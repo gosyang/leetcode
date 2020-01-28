@@ -16,9 +16,9 @@ DESCRIPTION
 package _36_lowest_common_ancestor_of_a_binary_tree
 
 type TreeNode struct {
-     Val int
-     Left *TreeNode
-     Right *TreeNode
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
 }
 
 func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
@@ -36,4 +36,5 @@ func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
 		return left
 	}
 }
+
 // 递归的思路，

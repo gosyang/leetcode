@@ -16,15 +16,16 @@ package _06_Reverse_Linked_List
  * Definition for singly-linked list.
  */
 type ListNode struct {
-    Val int
-    Next *ListNode
+	Val  int
+	Next *ListNode
 }
+
 func reverseList(head *ListNode) *ListNode {
 	if head == nil || head.Next == nil {
 		return head
 	}
 	rHead := &ListNode{
-		Val: head.Val,
+		Val:  head.Val,
 		Next: nil,
 	}
 	head = head.Next
@@ -36,6 +37,7 @@ func reverseList(head *ListNode) *ListNode {
 	}
 	return rHead
 }
+
 // 翻转链表，考虑nil，单个的情况，之后就是从第二个开始
 // 完全可以用 var 生命一个空指针啊！！
 

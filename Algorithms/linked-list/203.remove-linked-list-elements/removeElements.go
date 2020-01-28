@@ -17,9 +17,10 @@ package _03_remove_linked_list_elements
  * Definition for singly-linked list.
  */
 type ListNode struct {
-    Val int
-    Next *ListNode
+	Val  int
+	Next *ListNode
 }
+
 func removeElements(head *ListNode, val int) *ListNode {
 	if head == nil {
 		return nil
