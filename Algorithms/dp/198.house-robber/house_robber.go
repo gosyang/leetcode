@@ -63,7 +63,7 @@ func rob(nums []int) int {
 // c. dp[0] = nums[0] dp[1] = nums[1]
 // d. 求max(dp[i])
 
-// 第二种方程，就是到第i家，最多多少钱，要么偷要么不偷, 假如有损失，
+// 第二种方程，就是到第i家，最多多少钱，要么偷要么不偷, 假如有负数，那还应该比较 dp[i-2]如果是负的，直接nums[i]
 // dp[i] = max(dp[i-2]+nums[i], dp[i-1])
 func rob2(nums []int) int {
 	preMax := 0
