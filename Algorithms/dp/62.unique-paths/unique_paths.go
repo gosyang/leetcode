@@ -31,6 +31,27 @@ func uniquePaths(m int, n int) int {
 
 // dp[i,j] 表示到[i,j]的路径数
 // dp[i,j] = dp[i-1,j] + dp[i, j-1]
-// dp[0,j] = dp[i,0] = 1
+// dp[0,j] = dp[i,0] = 1, 原理要吃透是因为旁边和上面没了，是有一边有，不能武断是1，真正的边界只有dp[0,0]=1
 // 最终为dp[m-1,n-1]
 // 压缩下成一维，并对于0的情况直接在循环赋值即可
+// TODO 【注意】这道题这种解法是在没有障碍的情况下，可以直接全是1, 最好用通用的办法，第一行第一列也是公式赋值的好
+
+func uniquePaths2(m int, n int) int {
+	dp := make([]int, n)
+	for i := 0; i < m; i++ {
+		for j := 0; j < n; j++ {
+			if i == 0 && j == 0 {
+				dp[j] = 1
+				continue
+			}
+			if i == 0 {
+				dp[j] = dp[j-1]
+			} else if j == 0 {
+				continue
+			} else {
+				dp[j] += dp[j-1]
+			}
+		}
+	}
+	return dp[n-1]
+}
