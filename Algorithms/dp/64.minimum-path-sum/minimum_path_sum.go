@@ -18,15 +18,17 @@ func minPathSum(grid [][]int) int {
 	n := len(grid[0])
 
 	dp := make([]int, n)
-	for i := 0; i < n; i++ {
-		if i == 0 {
-			dp[i] = grid[0][i]
-		} else {
-			dp[i] = dp[i-1] + grid[0][i]
-		}
-	}
-	for i := 1; i < len(grid); i++ {
+
+	for i := 0; i < len(grid); i++ {
 		for j := 0; j < n; j++ {
+			if i == 0 && j == 0 {
+				dp[0] = grid[0][0]
+				continue
+			}
+			if i == 0 {
+				dp[j] = dp[j-1] + grid[i][j]
+				continue
+			}
 			if j == 0 || dp[j] < dp[j-1] {
 				dp[j] += grid[i][j]
 			} else {
@@ -43,3 +45,5 @@ func minPathSum(grid [][]int) int {
 // c. 边界条件 dp[0,j] = grid[0,j], dp[i,0] = grid[i,0]
 // d. 结果dp[m-1,n-1]
 // e. 数据压缩下，不需要的空间去掉
+
+// 和62题一样，最好用从0开始的思路来做，一样的思路

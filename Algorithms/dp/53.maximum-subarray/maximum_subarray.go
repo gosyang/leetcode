@@ -51,5 +51,5 @@ func maxSubArray2(nums []int) int {
 	return res
 }
 
-// 结合198题大街的考虑，dp[i]定义为前i个数的最大和，dp[i] = max(dp[i-1]+nums[i], dp[i-1], nums[i]),
+// 结合198题大街的考虑，dp[i]定义为前i个数的最大和，dp[i] = max(dp[i-1]+nums[i], dp[i-1], nums[i]), 虽然行得通，但怎么保证连续？不如上面方程直观
 // 其实其中的对dp[i-1]的比较，就是max(dp[i])的过程，这样，直接最后dp[len(nums)]即可
