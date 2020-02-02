@@ -18,23 +18,23 @@ import (
 
 func TestMinimumTotal(t *testing.T) {
 	tests := []struct {
-		name string
-		input [][]int
+		name   string
+		input  [][]int
 		expect int
 	}{
-		//{
-		//	name: "empty",
-		//	input: [][]int{},
-		//	expect: 0,
-		//},
 		{
-			name: "1",
-			input: [][]int{{1}},
+			name:   "empty",
+			input:  [][]int{},
+			expect: 0,
+		},
+		{
+			name:   "1",
+			input:  [][]int{{1}},
 			expect: 1,
 		},
 		{
-			name: "example",
-			input: [][]int{{2},{3,4},{6,5,7},{4,1,8,3}},
+			name:   "example",
+			input:  [][]int{{2}, {3, 4}, {6, 5, 7}, {4, 1, 8, 3}},
 			expect: 11,
 		},
 	}
