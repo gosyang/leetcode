@@ -15,7 +15,7 @@ DESCRIPTION
 package __longest_palindromic_substring
 
 func longestPalindrome(s string) string {
-	if s == ""  || len(s) == 1{
+	if s == "" || len(s) == 1 {
 		return s
 	}
 	var dp [1000][1000]bool
@@ -27,7 +27,7 @@ func longestPalindrome(s string) string {
 	max := 1
 	// 右是j， 左是i
 	for j := 1; j < len(s); j++ {
-		for i := j-1; i >= 0; i-- {
+		for i := j - 1; i >= 0; i-- {
 			if j-i == 1 {
 				dp[i][j] = s[i] == s[j]
 			} else if s[i] == s[j] {
@@ -38,8 +38,8 @@ func longestPalindrome(s string) string {
 			// 记录
 			if dp[i][j] {
 				if j-i+1 > max {
-					max = j-i+1
-					res = s[i:j+1]
+					max = j - i + 1
+					res = s[i : j+1]
 				}
 			}
 		}

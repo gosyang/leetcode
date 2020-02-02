@@ -33,7 +33,7 @@ func numDecodings(s string) int {
 		if s[i] == '0' {
 			one = 0
 		}
-		if s[i-1] == '1' || s[i-1] == '2' && s[i] <= '6'{
+		if s[i-1] == '1' || s[i-1] == '2' && s[i] <= '6' {
 			one += two
 		}
 		two = tmp

@@ -15,34 +15,34 @@ package __longest_palindromic_substring
 import "testing"
 
 func TestLongestPalindrome(t *testing.T) {
-	tests := []struct{
-		name string
-		input string
+	tests := []struct {
+		name   string
+		input  string
 		expect string
 	}{
 		{
-			name: "empty string",
-			input: "",
+			name:   "empty string",
+			input:  "",
 			expect: "",
 		},
 		{
-			name: "a",
-			input: "a",
+			name:   "a",
+			input:  "a",
 			expect: "a",
 		},
 		{
-			name: "ac",
-			input: "ac",
+			name:   "ac",
+			input:  "ac",
 			expect: "a",
 		},
 		{
-			name: "cbbd",
-			input: "cbbd",
+			name:   "cbbd",
+			input:  "cbbd",
 			expect: "bb",
 		},
 	}
 	for _, test := range tests {
-		t.Run(test.name, func(t *testing.T){
+		t.Run(test.name, func(t *testing.T) {
 			if get := longestPalindrome(test.input); get != test.expect {
 				t.Errorf("longestPalindrome(%s)=%s != %s", test.input, get, test.expect)
 			}

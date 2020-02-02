@@ -15,49 +15,49 @@ package _1_decode_ways
 import "testing"
 
 func TestNumDecodings(t *testing.T) {
-	tests := []struct{
-		name string
-		input string
+	tests := []struct {
+		name   string
+		input  string
 		expect int
 	}{
 		{
-			name: "0",
-			input: "0",
+			name:   "0",
+			input:  "0",
 			expect: 0,
 		},
 		{
-			name: "00",
-			input: "00",
+			name:   "00",
+			input:  "00",
 			expect: 0,
 		},
 		{
-			name: "000",
-			input: "000",
+			name:   "000",
+			input:  "000",
 			expect: 0,
 		},
 		{
-			name: "101",
-			input: "101",
+			name:   "101",
+			input:  "101",
 			expect: 1,
 		},
 		{
-			name: "1",
-			input: "1",
+			name:   "1",
+			input:  "1",
 			expect: 1,
 		},
 		{
-			name: "10",
-			input: "10",
+			name:   "10",
+			input:  "10",
 			expect: 1,
 		},
 		{
-			name: "12",
-			input: "12",
+			name:   "12",
+			input:  "12",
 			expect: 2,
 		},
 		{
-			name: "226",
-			input: "226",
+			name:   "226",
+			input:  "226",
 			expect: 3,
 		},
 	}

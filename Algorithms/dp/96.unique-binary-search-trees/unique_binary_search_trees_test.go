@@ -16,23 +16,23 @@ import "testing"
 
 func TestNumTrees(t *testing.T) {
 	tests := []struct {
-		name string
-		input int
+		name   string
+		input  int
 		expect int
 	}{
 		{
-			name: "1",
-			input: 1,
+			name:   "1",
+			input:  1,
 			expect: 1,
 		},
 		{
-			name: "2",
-			input: 2,
+			name:   "2",
+			input:  2,
 			expect: 2,
 		},
 		{
-			name: "3",
-			input: 3,
+			name:   "3",
+			input:  3,
 			expect: 5,
 		},
 	}

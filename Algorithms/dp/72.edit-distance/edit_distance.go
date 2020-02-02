@@ -25,8 +25,8 @@ rose -> ros (删除 'e')
 package _2_edit_distance
 
 func minDistance(word1 string, word2 string) int {
-	l1 := len(word1)+1
-	l2 := len(word2)+1
+	l1 := len(word1) + 1
+	l2 := len(word2) + 1
 
 	dp := make([]int, l2)
 

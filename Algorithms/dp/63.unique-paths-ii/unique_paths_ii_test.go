@@ -15,9 +15,9 @@ package _3_unique_paths_ii
 import "testing"
 
 func TestUniquePathsWithObstacles(t *testing.T) {
-	tests := []struct{
-		name string
-		input [][]int
+	tests := []struct {
+		name   string
+		input  [][]int
 		expect int
 	}{
 		{
@@ -32,7 +32,7 @@ func TestUniquePathsWithObstacles(t *testing.T) {
 		},
 		{
 			name:   "[[1,0]]",
-			input:  [][]int{{1,0}},
+			input:  [][]int{{1, 0}},
 			expect: 0,
 		},
 		{
@@ -42,7 +42,7 @@ func TestUniquePathsWithObstacles(t *testing.T) {
 		},
 		{
 			name:   "[[0,0,0],[0,1,0],[0,0,0]]",
-			input:  [][]int{{0,0,0}, {0, 1, 0}, {0,0,0}},
+			input:  [][]int{{0, 0, 0}, {0, 1, 0}, {0, 0, 0}},
 			expect: 2,
 		},
 	}

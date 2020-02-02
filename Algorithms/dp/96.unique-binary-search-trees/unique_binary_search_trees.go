@@ -16,11 +16,9 @@ func numTrees(n int) int {
 	dp := make([]int, n+1)
 	dp[0] = 1
 	for i := 1; i < n+1; i++ {
-		sum := 0
 		for j := 0; j < i; j++ {
-			sum += dp[j]*dp[i-1-j]
+			dp[i] += dp[j] * dp[i-1-j]
 		}
-		dp[i] = sum
 	}
 	return dp[n]
 }
