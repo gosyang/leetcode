@@ -18,6 +18,7 @@ Date: 2017/06/26 16:06:38
 #         self.val = x
 #         self.left = None
 #         self.right = None
+from collections import deque
 
 class Solution(object):
     def isSameTree(self, p, q):
@@ -40,3 +41,30 @@ class Solution(object):
         else:
             return False
 
+    def isSameTree2(self, p, q):
+        """
+        采用非递归的办法，使用双端队列入队列存储，比用栈简单
+        """
+        def check(p, q):
+            if not p and not q:
+                return True
+            if not p or not q:
+                return False
+            if p.val == q.val:
+                return True
+            return False
+
+        deq = deque([(p,q),])
+        while deq:
+            p, q = deq.popleft()
+            if not check(p, q):
+                return False
+             
+            # 如果是True要么都是NULL，要么都有，要判断下
+            if p:
+                deq.append([p.left, q.left])
+                deq.append([p.right, q.right])
+        # 不可少！！
+        return True
+
+    
