@@ -4,9 +4,9 @@
 # Copyright (c) 2017 gosyang. All Rights Reserved
 # 
 """
-File: maximum-depth-of-n-ary-tree
+File: n-ary-tree-postorder-traversal
 Author: gosyang
-Date: 2020/2/4 3:02 PM
+Date: 2020/2/4 4:15 PM
 """
 """
 # Definition for a Node.
@@ -17,21 +17,19 @@ class Node(object):
 """
 from collections import deque
 class Solution(object):
-    def maxDepth(self, root):
+    def postorder(self, root):
         """
         :type root: Node
-        :rtype: int
+        :rtype: List[int]
         """
-        res = 0
-        stack = deque([(1, root)],)
+        stack, res = deque([root],), []
         while stack:
-            depth, r = stack.pop()
+            r = stack.pop()
             if r is None:
                 continue
-            res = max(res, depth)
+            res.append(r.val)
             for c in r.children:
-                stack.append((depth+1, c))
-        return res
+                stack.append(c)
 
-# 直接非递归的搞就行，bfs和dfs都可以, 关键是记录层数
-# 这里顺序加入栈的话，是从最右边开始算，reversed(r.children)就是从左到右了
+        return res[::-1]
+# 与589 中序遍历对比！！精妙
