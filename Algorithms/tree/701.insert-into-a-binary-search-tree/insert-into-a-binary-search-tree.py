@@ -32,3 +32,19 @@ class Solution(object):
         return root
 
 # 递归的插就完了
+
+    def insertIntoBST2(self, root, val):
+        node = root
+        while node:
+            if node.val > val:
+                if node.left is None:
+                    node.left = TreeNode(val)
+                    return root
+                node = node.left
+            else:
+                if node.right is None:
+                    node.right = TreeNode(val)
+                    return root
+                node = node.right
+
+        return TreeNode(val)
