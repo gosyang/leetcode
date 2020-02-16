@@ -31,8 +31,8 @@ class KthLargest(object):
                 heapq.heappush(self.heap, n)
             else:
                 if n > self.heap[0]:
-                    heapq.heappop(self.heap)
-                    heapq.heappush(self.heap, n)
+                    # pop 再 push
+                    heapq.heapreplace(self.heap, n)
 
     def add(self, val):
         """
@@ -45,8 +45,7 @@ class KthLargest(object):
             return self.heap[0]
 
         if val > self.heap[0]:
-            heapq.heappop(self.heap)
-            heapq.heappush(self.heap, val)
+            heapq.heapreplace(self.heap, val)
         return self.heap[0]
 
 
