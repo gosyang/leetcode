@@ -16,10 +16,11 @@ package _00_search_in_a_binary_search_tree
  * Definition for a binary tree node.
  */
 type TreeNode struct {
-    Val int
-    Left *TreeNode
-    Right *TreeNode
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
 }
+
 func searchBST(root *TreeNode, val int) *TreeNode {
 	if root == nil {
 		return nil

@@ -18,10 +18,11 @@ package convert_sorted_array_to_binary_search_tree
  * Definition for a binary tree node.
  */
 type TreeNode struct {
-    Val int
-    Left *TreeNode
-    Right *TreeNode
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
 }
+
 func sortedArrayToBST(nums []int) *TreeNode {
 	n := len(nums)
 	if n == 0 {
@@ -29,12 +30,11 @@ func sortedArrayToBST(nums []int) *TreeNode {
 	}
 	mid := n / 2
 	return &TreeNode{
-		Left: sortedArrayToBST(nums[:mid]),
+		Left:  sortedArrayToBST(nums[:mid]),
 		Right: sortedArrayToBST(nums[mid+1:]),
-		Val: nums[mid],
+		Val:   nums[mid],
 	}
 }
 
 // 这道题属于简单的，升序数组组成平衡的bst，那就是去mid的元素做根即可
 // 类似的题目，一起研究
-

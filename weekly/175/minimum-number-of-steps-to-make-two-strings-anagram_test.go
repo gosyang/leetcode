@@ -18,43 +18,43 @@ import (
 
 func TestMinSteps(t *testing.T) {
 	tests := []struct {
-		name string
+		name   string
 		inputS string
 		inputT string
 		expect int
 	}{
 		{
-			name: "empty",
+			name:   "empty",
 			inputS: "",
 			inputT: "",
 			expect: 0,
 		},
 		{
-			name: "1",
+			name:   "1",
 			inputS: "bab",
 			inputT: "aba",
 			expect: 1,
 		},
 		{
-			name: "2",
+			name:   "2",
 			inputS: "leetcode",
 			inputT: "practice",
 			expect: 5,
 		},
 		{
-			name: "anagram",
+			name:   "anagram",
 			inputS: "anagram",
 			inputT: "mangaar",
 			expect: 0,
 		},
 		{
-			name: "xxyyzz",
+			name:   "xxyyzz",
 			inputS: "xxyyzz",
 			inputT: "xxyyzz",
 			expect: 0,
 		},
 		{
-			name: "friend",
+			name:   "friend",
 			inputS: "friend",
 			inputT: "family",
 			expect: 4,

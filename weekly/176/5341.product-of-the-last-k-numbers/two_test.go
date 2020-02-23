@@ -13,8 +13,8 @@ xx
 package _341_product_of_the_last_k_numbers
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 func TestProductOfNumbers(t *testing.T) {

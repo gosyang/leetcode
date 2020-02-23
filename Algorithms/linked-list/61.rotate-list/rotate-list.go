@@ -15,11 +15,12 @@ package _1_rotate_list
 
 /*
 Definition for singly-linked list.
- */
+*/
 type ListNode struct {
-    Val int
-    Next *ListNode
+	Val  int
+	Next *ListNode
 }
+
 func rotateRight(head *ListNode, k int) *ListNode {
 	if head == nil {
 		return nil
@@ -37,7 +38,7 @@ func rotateRight(head *ListNode, k int) *ListNode {
 	}
 	cur = head
 	end := head
-	for i := 0; i < length - last; i++ {
+	for i := 0; i < length-last; i++ {
 		end = cur
 		cur = cur.Next
 	}
@@ -75,7 +76,7 @@ func rotateRight2(head *ListNode, k int) *ListNode {
 	// 挪到最后一个就行了
 	cur = head
 	end.Next = head
-	for i := 0; i < length - last - 1; i++ {
+	for i := 0; i < length-last-1; i++ {
 		cur = cur.Next
 	}
 	newHead := cur.Next

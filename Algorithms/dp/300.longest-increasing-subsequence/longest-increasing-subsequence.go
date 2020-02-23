@@ -31,7 +31,7 @@ func lengthOfLIS(nums []int) int {
 		for j := 0; j < i; j++ {
 			if nums[j] < nums[i] {
 				if dp[j]+1 > max {
-					max = dp[j]+1
+					max = dp[j] + 1
 				}
 			}
 		}

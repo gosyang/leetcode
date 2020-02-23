@@ -16,38 +16,38 @@ import "testing"
 
 func TestCheckIfExist(t *testing.T) {
 	tests := []struct {
-		name string
-		input []int
+		name   string
+		input  []int
 		expect bool
 	}{
 		{
-			name: "2-no",
-			input: []int{1,1},
+			name:   "2-no",
+			input:  []int{1, 1},
 			expect: false,
 		},
 		{
-			name: "2-yes",
-			input: []int{2,1},
+			name:   "2-yes",
+			input:  []int{2, 1},
 			expect: true,
 		},
 		{
-			name: "10,2,5,3",
-			input: []int{10,2,5,3},
+			name:   "10,2,5,3",
+			input:  []int{10, 2, 5, 3},
 			expect: true,
 		},
 		{
-			name: "7,1,14,11",
-			input: []int{7,1,14,11},
+			name:   "7,1,14,11",
+			input:  []int{7, 1, 14, 11},
 			expect: true,
 		},
 		{
-			name: "3,1,7,11",
-			input: []int{3,1,7,11},
+			name:   "3,1,7,11",
+			input:  []int{3, 1, 7, 11},
 			expect: false,
 		},
 		{
-			name: "-1,0,1",
-			input: []int{-1,0,1},
+			name:   "-1,0,1",
+			input:  []int{-1, 0, 1},
 			expect: false,
 		},
 	}
@@ -59,5 +59,3 @@ func TestCheckIfExist(t *testing.T) {
 		})
 	}
 }
-
-

@@ -18,10 +18,11 @@ package _65_univalued_binary_tree
  * Definition for a binary tree node.
  */
 type TreeNode struct {
-    Val int
-    Left *TreeNode
-    Right *TreeNode
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
 }
+
 func isUnivalTree(root *TreeNode) bool {
 	if root == nil {
 		return true

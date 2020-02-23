@@ -14,12 +14,11 @@ DESCRIPTION
 */
 package _00_Same_Tree
 
-
 // Definition for a binary tree node.
 type TreeNode struct {
-	Val int
-    Left *TreeNode
-    Right *TreeNode
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
 }
 
 func isSameTree(p *TreeNode, q *TreeNode) bool {
@@ -34,4 +33,5 @@ func isSameTree(p *TreeNode, q *TreeNode) bool {
 	}
 	return false
 }
+
 // 递归遍历，O（N)

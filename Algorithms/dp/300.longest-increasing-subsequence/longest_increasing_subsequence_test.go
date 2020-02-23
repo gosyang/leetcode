@@ -16,33 +16,33 @@ import "testing"
 
 func TestLengthOfLIS(t *testing.T) {
 	tests := []struct {
-		name string
-		input []int
+		name   string
+		input  []int
 		expect int
 	}{
 		{
-			name: "empty",
-			input: []int{},
+			name:   "empty",
+			input:  []int{},
 			expect: 0,
 		},
 		{
-			name: "1",
-			input: []int{1},
+			name:   "1",
+			input:  []int{1},
 			expect: 1,
 		},
 		{
-			name: "1,2",
-			input: []int{1,2},
+			name:   "1,2",
+			input:  []int{1, 2},
 			expect: 2,
 		},
 		{
-			name: "3,2,1",
-			input: []int{3,2,1},
+			name:   "3,2,1",
+			input:  []int{3, 2, 1},
 			expect: 1,
 		},
 		{
-			name: "10,9,2,5,3,7,101,18",
-			input: []int{10,9,2,5,3,7,101,18},
+			name:   "10,9,2,5,3,7,101,18",
+			input:  []int{10, 9, 2, 5, 3, 7, 101, 18},
 			expect: 4,
 		},
 	}

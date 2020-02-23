@@ -16,17 +16,15 @@ type TweetCounts struct {
 	record map[string]map[int]int
 }
 
-
 func Constructor() TweetCounts {
 	return TweetCounts{
 		recordMinute: make(map[string]map[int]int),
-		recordHour: make(map[string]map[int]int),
-		recordDay: make(map[string]map[int]int),
+		recordHour:   make(map[string]map[int]int),
+		recordDay:    make(map[string]map[int]int),
 	}
 }
 
-
-func (this *TweetCounts) RecordTweet(tweetName string, time int)  {
+func (this *TweetCounts) RecordTweet(tweetName string, time int) {
 	if _, ok := this.recordMinute[tweetName]; !ok {
 		this.recordMinute[tweetName] = make(map[int]int)
 		this.recordHour[tweetName] = make(map[int]int)
@@ -37,20 +35,19 @@ func (this *TweetCounts) RecordTweet(tweetName string, time int)  {
 	this.recordDay[tweetName][time/86400] += 1
 }
 
-
 func (this *TweetCounts) GetTweetCountsPerFrequency(freq string, tweetName string, startTime int, endTime int) []int {
 	res := make([]int, 0)
 	switch freq {
 	case "minute":
-		for i := startTime/60; i <= endTime/60; i++ {
+		for i := startTime / 60; i <= endTime/60; i++ {
 			res = append(res, this.recordMinute[tweetName][i])
 		}
 	case "hour":
-		for i := startTime/3600; i <= endTime/3600; i++ {
+		for i := startTime / 3600; i <= endTime/3600; i++ {
 			res = append(res, this.recordHour[tweetName][i])
 		}
 	case "day":
-		for i := startTime/86400; i <= endTime/86400; i++ {
+		for i := startTime / 86400; i <= endTime/86400; i++ {
 			res = append(res, this.recordDay[tweetName][i])
 		}
 	}

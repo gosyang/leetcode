@@ -24,7 +24,6 @@ type ProductOfNumbers struct {
 	NonZeroRes []int
 }
 
-
 func Constructor() ProductOfNumbers {
 	//return ProductOfNumbers{
 	//	zero: 0,
@@ -36,8 +35,7 @@ func Constructor() ProductOfNumbers {
 	}
 }
 
-
-func (this *ProductOfNumbers) Add(num int)  {
+func (this *ProductOfNumbers) Add(num int) {
 	//if num == 0 {
 	//	this.zero = 1
 	//	this.length = 0
@@ -58,7 +56,6 @@ func (this *ProductOfNumbers) Add(num int)  {
 	this.NonZeroRes = append(this.NonZeroRes, this.NonZeroRes[len(this.NonZeroRes)-1]*num)
 }
 
-
 func (this *ProductOfNumbers) GetProduct(k int) int {
 	//if this.zero != 0 && k >= this.zero {
 	//	return 0
@@ -67,7 +64,7 @@ func (this *ProductOfNumbers) GetProduct(k int) int {
 	if k >= len(this.NonZeroRes) {
 		return 0
 	}
-	return this.NonZeroRes[len(this.NonZeroRes)-1]/this.NonZeroRes[len(this.NonZeroRes)-1-k]
+	return this.NonZeroRes[len(this.NonZeroRes)-1] / this.NonZeroRes[len(this.NonZeroRes)-1-k]
 }
 
 /**
