@@ -30,6 +30,7 @@ func dfs(s []byte, start int, res *[]string) {
 		return
 	}
 	// 这里的bug点在于 给的字符可能是有重复的，排列出来是可能重复的，保证个字符在某个位置一次
+	// 如果s本身没有重复，就不需要map了
 	m := map[byte]bool{}
 	for i := start; i < len(s); i++ {
 		if _, ok := m[s[i]]; ok {
