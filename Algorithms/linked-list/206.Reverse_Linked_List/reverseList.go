@@ -52,3 +52,15 @@ func reverseList2(head *ListNode) *ListNode {
 	}
 	return pre
 }
+
+// 递归解法
+// 1-2-3-4-5-nil
+func reverseList3(head *ListNode) *ListNode {
+	if head == nil || head.Next == nil {
+		return head
+	}
+	ret := reverseList(head.Next)
+	head.Next.Next = head
+	head.Next = nil
+	return ret
+}

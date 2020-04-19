@@ -36,3 +36,55 @@ func mergeTwoLists(l1 *ListNode, l2 *ListNode) *ListNode {
 }
 
 // 递归解法，类似归并排序 时间空间O(m+n)
+
+func mergeTwoListsGood(l1 *ListNode, l2 *ListNode) *ListNode {
+	dummy := &ListNode{
+		Val: 0,
+	}
+	cur := dummy
+	for l1 != nil && l2 != nil {
+		if l1.Val < l2.Val {
+			// 这里直接把连接连起来？
+			cur.Next = l1
+			l1 = l1.Next
+		} else {
+			cur.Next = l2
+			l2 = l2.Next
+		}
+		cur = cur.Next
+	}
+	if l1 == nil {
+		cur.Next = l2
+	} else {
+		cur.Next = l1
+	}
+	return dummy.Next
+}
+
+func mergeTwoLists2(l1 *ListNode, l2 *ListNode) *ListNode {
+	dummy := &ListNode{
+		Val: 0,
+	}
+	cur := dummy
+	for l1 != nil || l2 != nil {
+		var n int
+		if l1 != nil && l2 != nil {
+			if l1.Val < l2.Val {
+				n = l1.Val
+				l1 = l1.Next
+			} else {
+				n = l2.Val
+				l2 = l2.Next
+			}
+		} else if l1 != nil {
+			n = l1.Val
+			l1 = l1.Next
+		} else {
+			n = l2.Val
+			l2 = l2.Next
+		}
+		cur.Next = &ListNode{Val: n}
+		cur = cur.Next
+	}
+	return dummy.Next
+}
