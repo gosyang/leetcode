@@ -14,7 +14,7 @@ DESCRIPTION
 
 注意 ... 是可以的，就是不能. 和 .. 和空，注意返回必须/ 开头，可能.. 太多返回到根
 */
-package string
+package _1_simplify_path
 
 import "strings"
 
