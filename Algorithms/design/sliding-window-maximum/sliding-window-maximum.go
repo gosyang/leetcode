@@ -28,8 +28,7 @@ func maxSlidingWindow(nums []int, k int) []int {
 		} else {
 			for j := 1; j < len(max); j++ {
 				if nums[i] > max[j] {
-					max[j] = nums[i]
-					max = max[:j+1]
+					max = max[:j]
 				}
 			}
 			max = append(max, nums[i])
