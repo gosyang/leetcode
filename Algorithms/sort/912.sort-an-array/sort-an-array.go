@@ -15,7 +15,7 @@ package _12_sort_an_array
 import "math/rand"
 
 func heapSort(nums []int) {
-	len := len(nums)-1
+	len := len(nums) - 1
 	buildMaxHeap(nums, len)
 	for i := len; i >= 1; i-- {
 		nums[i], nums[0] = nums[0], nums[i]
@@ -25,15 +25,15 @@ func heapSort(nums []int) {
 }
 
 func buildMaxHeap(nums []int, len int) {
-	for i := len/2; i >= 0; i-- {
+	for i := len / 2; i >= 0; i-- {
 		maxHeapify(nums, i, len)
 	}
 }
 
 func maxHeapify(nums []int, i, len int) {
-	for (i << 1) + 1 <= len {
-		lson := i << 1 + 1
-		rson := i << 1 + 2
+	for (i<<1)+1 <= len {
+		lson := i<<1 + 1
+		rson := i<<1 + 2
 		large := 0
 		if lson <= len && nums[lson] > nums[i] {
 			large = lson
@@ -59,7 +59,7 @@ func sortArray(nums []int) []int {
 
 func quickSort(nums []int, low, high int) {
 	if low < high {
-		randIndex := rand.Intn(high-low+1)+low
+		randIndex := rand.Intn(high-low+1) + low
 		nums[low], nums[randIndex] = nums[randIndex], nums[low]
 		lowIndex := getIndex(nums, low, high)
 
@@ -112,9 +112,9 @@ func mergeSort(nums []int, l, r int) {
 func merge(nums []int, l, m, r int) {
 	tmp := make([]int, r-l+1)
 	i := l
-	j := m+1
+	j := m + 1
 	k := 0
-	for ; k<r-l+1; k++ {
+	for ; k < r-l+1; k++ {
 		if i > m {
 			tmp[k] = nums[j]
 			j++
